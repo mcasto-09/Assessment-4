@@ -20,13 +20,13 @@ nunjucks.configure('views', {
 })
 
 app.get('/', (req, res) => {
-    res.sendFile('C:/Users/Mary Castorani/src/assessment 4/views/index.js')
+    res.sendFile('C:/Users/Mary Castorani/Documents/GitHub/Assessment-4/views/index.jsx')
 })
 
 app.listen(port, () => {
     console.log(`App is listening on port http://localhost:${port}`)
 })
 
-// app.get('/pokemon', (req, res) => {
-//      res.render('Public/index.html');
-//   });
+app.get('/', (req, res) => {
+     res.render('index.html');
+  });
