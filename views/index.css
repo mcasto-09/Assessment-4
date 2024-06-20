@@ -1,3 +1,6 @@
-p {
-    color: aquamarine;
+h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:crimson;
+    padding: 30px;
+    text-align: center;
 }
