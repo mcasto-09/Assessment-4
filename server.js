@@ -1,7 +1,7 @@
 import express from 'express'
 import session from 'express-session'
 import morgan from 'morgan'
-import nunjucks from 'nunjucks'
+import ViteExpress from 'vite-express'
 
 const app = express()
 const port = '8000'
@@ -14,19 +14,12 @@ app.use(session({
     saveUninitialized: true,
     resave: false
 }))
-nunjucks.configure('views', {
-    autoescape:true,
-    express: app,
-})
+ViteExpress.config({printViteDevServerHost: true})
 
-app.get('/', (req, res) => {
-    res.sendFile('C:/Users/Mary Castorani/Documents/GitHub/Assessment-4/views/index.jsx')
-})
-
-app.listen(port, () => {
+ViteExpress.listen(app, port, () => {
     console.log(`App is listening on port http://localhost:${port}`)
 })
 
-app.get('/', (req, res) => {
+app.get('/spells', (req, res) => {
      res.render('index.html');
   });
